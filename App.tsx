@@ -6,8 +6,7 @@ import { Inter_400Regular, Inter_500Medium } from '@expo-google-fonts/inter';
 import { Rajdhani_500Medium, Rajdhani_700Bold } from '@expo-google-fonts/rajdhani';
 
 import Background from "./src/components/Background";
-import SignIn from "./src/Screens/SignIn";
-import Home from "./src/Screens/Home";
+import Routes from "./src/Routes";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -17,6 +16,6 @@ export default function App() {
 
   return (<Background>
     <StatusBar barStyle="light-content" backgroundColor="transparent" translucent/>
-    {fontsLoaded ? <Home /> : <AppLoading />}
+    {fontsLoaded ? <Routes /> : <AppLoading />}
   </Background>)
 }
